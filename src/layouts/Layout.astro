@@ -5,6 +5,7 @@ interface Props {
 }
 
 import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
 
 const { title, description } = Astro.props;
 ---
@@ -26,9 +27,25 @@ const { title, description } = Astro.props;
 </html>
 <style is:global>
   :root {
+    color-scheme: dark;
   }
   html {
-    font-family: system-ui, sans-serif;
-    background: #111e31;
+    font-family: "Onest Variable", system-ui, sans-serif;
+    background: #151a36;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5em;
+    font-weight: 100;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    text-wrap: pretty;
+    line-height: 1.4;
+  }
+
+  p strong {
+    color: white;
+    font-weight: bold;
   }
 </style>
