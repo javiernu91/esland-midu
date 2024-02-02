@@ -10,13 +10,13 @@ import BentoItem from "./BentoItem.astro";
     title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
   >
     <div
-      class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
+      class="z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
     >
     </div>
     <div
       slot="image"
       class="absolute left-0 top-0 bottom-0 object-cover object-center w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('public/mountain.webp')"
+      style="background-image: url('mountain.webp')"
     >
     </div>
 
@@ -40,7 +40,7 @@ import BentoItem from "./BentoItem.astro";
     <div
       slot="image"
       class="absolute left-0 top-0 bottom-0 object-cover object-center w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('public/pista.webp')"
+      style="background-image: url('/pistas.webp')"
     >
     </div>
     <p slot="content" class="max-w-xl">
@@ -63,7 +63,7 @@ import BentoItem from "./BentoItem.astro";
     <div
       slot="image"
       class="absolute left-0 top-0 bottom-0 object-cover object-center w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('public/gref.webp')"
+      style="background-image: url('/gref.webp')"
     >
     </div>
     <p slot="content" class="max-w-xl">
@@ -77,24 +77,25 @@ import BentoItem from "./BentoItem.astro";
   <BentoItem
     class="col-span-10 md:col-span-4"
     title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
-  />
-
-  <div
-    class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
   >
-  </div>
-  <div
-    slot="image"
-    class="absolute left-0 top-0 bottom-0 object-cover object-center w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-    style="background-image: url('public/laptop_esland.webp')"
-  >
-  </div>
+    <div
+      class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
+    >
+    </div>
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0 object-cover object-center w-full h-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/laptop_esland.png')"
+    >
+    </div>
 
-  <p slot="content" class="max-w-xl">
-    Este año, el reddit no formará parte de las votaciones de los premios, pero
-    sí que <strong> formará parte de la comunidad</strong>. El subreddit oficial
-    de los Premios ESLAND está abierto para ti, para que compartas tus clips,
-    tus opiniones y para que <strong>interactúes con toda la comunidad</strong> del
-    streaming hispanohablante.
-  </p>
+    <p slot="content" class="max-w-xl">
+      Este año, el reddit no formará parte de las votaciones de los premios,
+      pero sí que <strong> formará parte de la comunidad</strong>. El subreddit
+      oficial de los Premios ESLAND está abierto para ti, para que compartas tus
+      clips, tus opiniones y para que <strong
+        >interactúes con toda la comunidad</strong
+      > del streaming hispanohablante.
+    </p>
+  </BentoItem>
 </section>
