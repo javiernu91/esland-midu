@@ -1,14 +1,15 @@
 ---
 import BentoItem from "./BentoItem.astro";
+
+import { getI18N } from "../i18n";
+const { currentLocale = "es" } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section
   class="w-full max-w-[1400px] grid grid-cols-10 auto-rows-[30rem] gap-4 mx-auto p-20"
 >
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
-  >
+  <BentoItem class="col-span-10 md:col-span-4" title={i18n.CONTENT_TITLE_1}>
     <div
       class="z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
     >
@@ -20,18 +21,17 @@ import BentoItem from "./BentoItem.astro";
     >
     </div>
 
-    <p slot="content" class="max-w-xl text-base md:text-lg">
-      Una nueva edición <strong>cargada de novedades</strong> y contenido, que empezará
-      varias semanas antes de la ansiada gala. <strong>
-        Directos especiales, colaboraciones, conciertos y mucho más</strong
-      > en lo que será una auténtica fiesta dedicada a la creación de contenido.
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.CONTENT_DESCRIPTION_1}
+    />
   </BentoItem>
 
   <BentoItem
     class="col-span-10 md:col-span-6"
-    title="LA ALFOMBRA BLANCA"
-    subtitle="16 de febrero de 2024"
+    title={i18n.CONTENT_TITLE_2}
+    subtitle={i18n.CONTENT_SUBTITLE_1}
   >
     <div
       class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
@@ -43,18 +43,17 @@ import BentoItem from "./BentoItem.astro";
       style="background-image: url('/gref.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl text-base md:text-lg">
-      Este año, el momento de la alfombra azul será sustituido y mejorado,
-      gracias a los increíbles paisajes andorranos, por una <strong
-        >alfombra blanca en plena nieve</strong
-      >, situada en las <strong>pistas de esquí de Andorra.</strong>
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.CONTENT_DESCRIPTION_2}
+    />
   </BentoItem>
 
   <BentoItem
     class="col-span-10 md:col-span-6"
-    title="LA GALA"
-    subtitle="17 de febrero de 2024"
+    title={i18n.CONTENT_TITLE_3}
+    subtitle={i18n.CONTENT_SUBTITLE_2}
   >
     <div
       class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
@@ -66,18 +65,14 @@ import BentoItem from "./BentoItem.astro";
       style="background-image: url('/pistas.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl text-base md:text-lg">
-      Una gala de premios llena de <strong
-        >contenido de primer nivel y muchas sorpresas</strong
-      >, en la que se descubrirán los <strong>ganadores</strong> de esta tercera
-      edición de los Premios ESLAND.
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.CONTENT_DESCRIPTION_3}
+    />
   </BentoItem>
 
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
-  >
+  <BentoItem class="col-span-10 md:col-span-4" title={i18n.CONTENT_TITLE_4}>
     <div
       class="absolute z-10 bottom-0 top-0 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
     >
@@ -89,13 +84,10 @@ import BentoItem from "./BentoItem.astro";
     >
     </div>
 
-    <p slot="content" class="max-w-xl text-base md:text-lg">
-      Este año, el reddit no formará parte de las votaciones de los premios,
-      pero sí que <strong> formará parte de la comunidad</strong>. El subreddit
-      oficial de los Premios ESLAND está abierto para ti, para que compartas tus
-      clips, tus opiniones y para que <strong
-        >interactúes con toda la comunidad</strong
-      > del streaming hispanohablante.
-    </p>
+    <p
+      slot="content"
+      class="max-w-xl text-base md:text-lg"
+      set:html={i18n.CONTENT_DESCRIPTION_4}
+    />
   </BentoItem>
 </section>
